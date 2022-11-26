@@ -8,7 +8,7 @@
 <div class="box  box-register shadow-lg">
     <div class="box-table">
         <div class="header shadow">
-            <h2>TWGroup</h2> 
+            <h2>Test</h2> 
             <h3>Todas las publicaciones hasta ahora</h3> 
     </div>
 

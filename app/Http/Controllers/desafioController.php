@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Comment;
 use App\Models\User;
+use App\Models\Users;
 use App\Mail\UserSendRecover;
 use App\Models\Publication;
 use App\Mail\EmergencyCallReceived;
@@ -105,6 +106,7 @@ class desafioController extends Controller
    }
 
    public function ObtenerComentario( $id){
+    
     $Comment = Comment::where('publication_id', $id)->get();
     $data = ['Comentarios' => $Comment];
     return view ('Comentarios', $data);

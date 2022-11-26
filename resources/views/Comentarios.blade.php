@@ -15,14 +15,18 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col"><strong class="centrar">Comentarios</strong></th>
+          <th scope="col"><strong >#</strong></th>
+          <th scope="col"><strong >Comentarios</strong></th>
+          <th scope="col"><strong >Usuario</strong></th>
           
         </tr>
       </thead>
       <tbody>
         @foreach ($Comentarios as $p)
         <tr>
+          <th>{{$p->user_id}}</th>
           <th>{{$p->content}}</th>
+          <th>{{$p->user->name}}</th>
         </tr>
         @endforeach
       </tbody>
@@ -32,6 +36,7 @@
 
       <div class="footer mtop16 ">
         <a href="{{url('/Publicaciones')}}">Hacer una Publicación</a>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <a href="{{url('/VerPublicaciones')}}">Ver Todas las publicaciones</a>
         @if(Session::has('message'))
         <div class="container">
